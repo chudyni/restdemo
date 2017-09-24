@@ -12,7 +12,7 @@ import java.util.Optional;
 /**
  * Created by marcin.bracisiewicz
  */
-//@Service
+@Service
 public class ArticleServiceImpl implements ArticleService {
 
     @Autowired
