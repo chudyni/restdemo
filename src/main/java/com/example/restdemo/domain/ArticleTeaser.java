@@ -10,7 +10,7 @@ import org.springframework.data.rest.core.config.Projection;
 public interface ArticleTeaser {
 
     Long getId();
-    
+
     String getTitle();
 
 }
