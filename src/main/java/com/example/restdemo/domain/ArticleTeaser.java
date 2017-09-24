@@ -1,4 +1,4 @@
-package com.example.restdemo.projection;
+package com.example.restdemo.domain;
 
 import com.example.restdemo.domain.Article;
 import org.springframework.data.rest.core.config.Projection;
@@ -9,6 +9,8 @@ import org.springframework.data.rest.core.config.Projection;
 @Projection(name = "articleTeaser", types = Article.class)
 public interface ArticleTeaser {
 
-//    String getTitle();
+    Long getId();
+    
+    String getTitle();
 
 }

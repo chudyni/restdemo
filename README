@@ -1,0 +1,11 @@
+Mappings:
+http://localhost:8080
+
+Use search:
+http://localhost:8080/articles/search/findByTitle?title=First
+
+Projection (must be in package with domain class to be projected):
+http://localhost:8080/articles/1?projection=articleTeaser
+
+
+POST
