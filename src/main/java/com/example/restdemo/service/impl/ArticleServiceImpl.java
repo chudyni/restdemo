@@ -4,6 +4,7 @@ import com.example.restdemo.domain.Article;
 import com.example.restdemo.repository.ArticleRepository;
 import com.example.restdemo.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,6 +14,7 @@ import java.util.Optional;
  * Created by marcin.bracisiewicz
  */
 @Service
+@ConditionalOnProperty(name = "article.service", havingValue = "impl")
 public class ArticleServiceImpl implements ArticleService {
 
     @Autowired
