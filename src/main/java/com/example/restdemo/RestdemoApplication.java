@@ -16,12 +16,9 @@ public class RestdemoApplication {
 	@Bean
 	@ConditionalOnMissingBean
 	public HelloService helloService() {
-		return new HelloService() {
-			@Override
-			public String sayHello() {
-				return "You don't have bean - I'm default";
-			}
-		};
+		return  () -> "You don't have bean - I'm default";
 	}
 
 }
+
+
