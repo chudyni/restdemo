@@ -18,9 +18,17 @@ public class HelloController {
     @Value("${environment.message}")
     private String message;
 
+    @Autowired
+    private HelloService helloService;
+
     @GetMapping("/greetings")
     public String greetings() {
         return "Environment: " + this.environment + " " + this.message;
+    }
+
+    @GetMapping("/hello")
+    public String hello() {
+        return this.helloService.sayHello();
     }
 
 }
