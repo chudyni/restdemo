@@ -15,7 +15,7 @@ public class RestdemoApplication {
 
 	@Bean
 	@ConditionalOnMissingBean
-	public HelloService helloService() {
+	public HelloService defaultHelloService() {
 		return  () -> "You don't have bean - I'm default";
 	}
 
