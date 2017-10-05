@@ -18,13 +18,21 @@ public class ArticleController {
     public ArticleService articleService;
 
     @GetMapping("/{id}")
-    @ResponseBody
     public Article getArticle(@PathVariable long id) {
         return this.articleService.getArticle(id);
     }
 
+    @GetMapping("/byTitle/{title}")
+    public Article getArticleByTitle(@PathVariable String title) {
+        return this.articleService.findByTitle(title);
+    }
+
+    @GetMapping("/byContent/{content}")
+    public Article getArticleByContent(@PathVariable String content) {
+        return this.articleService.findByContent(content);
+    }
+
     @GetMapping("/")
-    @ResponseBody
     public List<Article> getArticlesList() {
         return this.articleService.getArticlesList();
     }

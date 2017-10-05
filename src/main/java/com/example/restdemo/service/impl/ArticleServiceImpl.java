@@ -23,6 +23,16 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
+    public Article findByContent(final String content) {
+        return this.articleRepository.findByContent(content);
+    }
+
+    @Override
+    public Article findByTitle(final String title) {
+        return this.articleRepository.findByTitle(title);
+    }
+
+    @Override
     public List<Article> getArticlesList() {
         return (List<Article>) this.articleRepository.findAll();
     }

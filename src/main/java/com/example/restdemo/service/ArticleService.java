@@ -11,6 +11,10 @@ public interface ArticleService {
 
     Article getArticle(final long id);
 
+    Article findByContent(final String content);
+
+    Article findByTitle(final String title);
+
     List<Article> getArticlesList();
 
     Article update(final Long id, final Article update);
